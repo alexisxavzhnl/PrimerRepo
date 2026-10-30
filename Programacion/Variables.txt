@@ -1,0 +1,1109 @@
+Variables, Datos, Operadores
+================================
+
+vairables --> almacenan in formación. Ejemplo  precioBillete
+Buenas practicas: nombres descriptivos, camel case, (la primera letra minúscula la segunda mayuscula)
+
+operadores --> permite trabajar con esta información. ejemplo *, +, -, /
+
+expresiones --> convinan variables, literales y operadores
+
+*Literales --> valor fijo, escrito directamente en el código, adiferencia de una variable que puede cambiar de valor
+
+ejemplo de una expresión:
+
+total = precioBillete * cantidadBillete
+
+Tipos de variables
+===================
+Tipo	|información
+---------------------------
+Entero	|1, 2, 3...
+---------------------------
+Real	|3.5
+---------------------------
+Cadena	| "Lucia"
+---------------------------
+Logico	| Verdadero/falso
+
+
+DEFINICION DE VARIABLES 
+-------------------------------
+
+Definir edad entero
+Definir precio como real
+Definir nombre como cadena
+Definir tieneCarnet como logico
+
+
+
+DEFINIR LEER ESCRIBIR Y ASIGNAR
+-----------------------------------
+
+Definir edad como entero
+   |------> reserva un espacio en memoria y le damos un nombre(edad) y un tipo de dato (Entero)
+   |------> indica al programa que tipo de información podrá almacenar en esta variable
+
+
+LEER edad
+  |-------> Le estamos pidiendo al usuario que introduzca un valor por teclado
+  |------->la ejecuacion del programa se detiene y vemos en pantalla el símbolo ">"
+
+edad= 10
+  |-----> estamos guardando (asignando) 10 en la variable edad
+
+
+ESCRIBIR edad
+  |-----> Muestrta la información por pantalla para que el usuario lo pueda ver
+
+
+por ejemplo: 
+vamos a escribir este código en Pseint
+
+definir edad como Entero
+edad=18
+
+Leer edad
+Escribir edad
+
+¿Qué valor va a aparecer en la consola?
+
+=====================================
+
+EJERCICIO 1. CONCATENAR CADENAS
+
+=====================================
+
+Algoritmo concatenarCadenas
+//Pido un nombre por teclado y muestro el siguiente mensaje
+//¡Bienvenido <nombre>!
+//tipo de dato, este caso es Cadena y vamos a concatenar con ","
+
+//Delcaracion de las variables
+Definir nombre Como Cadena
+
+//Mostrar por la pantalla al usuario el mensaje "Introduce tu nombre: "
+
+Escribir "introduce tu nombre:"
+
+//El programa se detiene y espera el dato por teclado y lo guarda en la variable
+//nombre
+
+Leer nombre
+
+//Mostramos por pantalla al usuario el mensaje "¡Bienvenido <nombre>!"
+
+Escribir "¡Bienvenido ", nombre, "!"
+FinAlgoritmo
+
+=================================
+
+EJERCICIO 2. TIPO DE DATO LOGICO
+
+=================================
+
+
+Algoritmo concatenarCadenas
+  //Guardamos el estado de una luz (encendida o apagada)
+  //Como es un tipo de dato Logico solo puede valer Verdadero o Falso
+
+
+  //Definir variable
+  Definir luzEncendida Como Logico
+
+  //Asignamos un valor literal Logico
+  luzEncendida = Verdadero
+
+  //salida por pantalla
+  Escribir "¿La luz esta encendida? ", luzEncendida
+FinAlgoritmo
+
+
+========================================
+
+EL PROGRMA EMPIEZA A TOMAR DECISIONES SI
+
+========================================
+
+EJERCICO 3 Netflix permite crear una cuenta dependeidno de la edad.
+¿puede el usuario crear la cuenta?
+
+Modelo EPS
+
+entrada		|proceso			|salida
+
+-----------------------------------------
+edad		comprobar la edad		si o no
+
+
+Algoritmo concatenarCadenas
+ //delcaracion de variable
+ Definir edad Como Entero
+
+ //Muestra el mensaje por pantalla al usuario "Introduce tu edad:"
+
+Escribir "Introduce tu edad: "
+
+//El programa se detiene a esperar el dato por teclado y lo guarda en edad
+Leer edad
+
+//Creamos una bifurcacion en el programa, tenemos dos caminos posibles
+
+Si edad >=10 Entonces
+//camino1
+escribir"eres mayor de edad puedaes crear tu cuenta"
+
+SiNo
+  //camino 2
+  Escribir "No puedes crear la cuenta"
+FinSi
+FinAlgoritmo
+
+
+============================
+
+OPERADORES DE COMPARACION
+
+============================
+
+OPERADOR	|	SIGNIFICADO
+
+>			Mayor que
+<			Menor que
+>=			Mayor o igual
+<=			Menor o igual que
+!=			Distinto que
+
+
+¿Qué crees que devuelve cada expresion?
+
+Algoritmo Operadores
+//DECLARACION DE VARIABLE
+Definir edad Como Entero
+edad = 20
+
+//muestra por pantalla valor
+Escribir edad > 20
+
+Escribir edad = 10
+
+Escribir edad < 55
+
+FinAlgoritmo
+
+Ejercicio 8
+
+Declara las variables e tipo entero jugador1 y jugador2 
+
+muestra por pantalla al usuario los mensajes al usuario los mensajes:
+
+ 
+
+1º Camos a escribir todas la situaciones posibles que se pueden dar en la partida 
+por completo 
+
+JUGADOR 1	|	JUGADOR 2	|	RESULTADO	|
+-------------------------------------------------------------------
+Piedra(1)	|	Piedra(1)	|	EMPATE		|
+
+Piedra(1)	|	PAPEL(2)	|	GANA JUGADOR 2	|
+
+Piedra(1)	|	TIJERA(3)	|	GANA JUGADOR 1	|
+
+Papel(2)	|	Piedra(1)	|	GANA JUGADOR1	|
+
+Papel(2)	|	TIJERA(3)	|	GANA JUGADOR 2	|
+
+Papel(2)	|	Papel(2)	|	EMPATE		|
+	
+Tijera(3)	|	TIJERA(3)	|	EMPATE		|
+
+Tijera(3)	|	Papel(2)	|	GANA JUGADOR 1	|
+	
+Tijera(3)	|	Piedra(1)	|	GANA JUGADOR 2	|
+
+
+resolvemos el empate: 
+
+si jugador1=jugadro2 entonces
+		//estamos en el caso de empate resolvemos 3 de las 9 combinaciones
+
+	sino 
+		//Resolvemos las 6 combinaciones restantes
+
+
+fijamos una de nuestras variables, en este caso jugador1 ¿Qué opciones tenemos?
+
+1.-Si jugador1 ha sacado piedra(1)
+	-ya sabemos que no han empatado
+	opciones jugador2 ha podido sacar papel(2) o tijera(3)
+	-si jugador2 ha sacado papel(2), gana Jugador2, SINO gana Jugador1
+Repetimos la lógica anterior
+2.- Si jugador 1 ha sacado Papel(2)
+	-ya sabemos que no han empatado
+	-opciones Jugador2 ha podido sacar piedra(1) o tijera(3)
+	-Si jugador2 ha sacado piedra1, gana jugador1 Sino gana jugador2
+3.- Si jugador1 ha sacado Tijera(3)
+	-ya sabemos que no han empatado
+	-opciones Jugador2 ha podido sacar piedra(1) o papel(2)
+	-Si jugador 2 ha sacado piedra(1), gana jugador2, SINO gana jugador1
+
+
+
+
+
+------------------------------------------------------------
+
+Ejercicio: tarifa de un aparcamiento
+
+Objetivo solicitar al usuario el tiempo de estacionamiento en horas y si es Cliente Abonado o no
+para calcular la tarifa final a pagar aplicando los tramos correspondientes y el descuento si procede
+
+Si esAbonado Aplicamos un 20% de descuento
+
+tarifa:
+	1H=2€
+	mas de 1H menos de 3h = 5€
+	mas de 3H = 10€
+
+instrucciones
+
+1.- Declara las variables necesarias de tipo entero horas, de tipo lógico esAbonado
+de tipo real tarifa y precioFinal
+
+2.-Muestra por pantalla al usuario los siguientes mensajes:
+	"Introduce el numero de horas de estacionamiento:"
+	"¿Eres cliente abonado?" (VerdaderoFalso)
+
+3.Muestra por pantalla con este formato (Salidas según el caso)
+	"El importe total a pagar es: <precioFinal> €"
+
+
+
+Ejercicio:
+
+nuevo operador %
+
+el operador se conoce también como MOD o modulo se utiliza para calcular el resto de una division
+
+
+2. Saber si un numero es múltiplo de otro cuando
+la división es exacta (Resto = 0) significa que es múltiplo
+
+
+
+Algoritmo Modulo %
+	//declaramos la variable que almacena el numero
+	Definir numero Como Entero
+	
+	//Solicitamos numero
+	Leer numero 
+	
+	si numero%2 = 0 Entonces
+		Escribir "El numero es par"
+	SiNo
+		Escribir  "El numero es Impar"
+	FinSi
+FinAlgoritmo
+
+
+Funcion Trunc 
+---------------
+
+la función Trunc elimina la parte decumal de un numero y Conserva únicamente 
+su parte entera.
+
+Trunc (Expresion)
+
+por ejemplo
+
+expresión	|	Resultado
+---------------------------------------
+Trunc(4.8)	|	4
+---------------------------------------
+Trunc(7.2)	|	7
+---------------------------------------
+
+IMPORTANTE: trunc NO REDONDEA	
+
+
+EJERCICIO : ¿Cuántos miembros tiene cada equipo?
+
+Objetivo: Un grupo de 20 amigos va a realizar un scape room de 3 salas 
+los participantes deben dividirse en 3 equipos los mas equilibrados posibles.
+El programa deberá calcular cuantas personas habrá en cada equipo
+
+
+INSTRUCCIONES:
+
+1.-Delcara las variables numeroAmigos, personasPorEquipo, personasSobrantes, equipo1,
+equipo2, equipo3
+
+2.- Muestra al usuario por pantalla los mensajes:
+	"Numero total de participantes <numeroAmigos>"
+	"Personas que quedan por rapartir <PersonasSobrantes>"
+
+3.-Muestra por pantalla con este formato:
+
+	"El equipo 1 estará formado por <Equipo1> personas"
+	"El equipo 2 estará formado por <Equipo2> personas"
+	"El equipo 3 estará formado por <Equipo3> personas"
+
+Ayuda Si dividimos un numero entre 3 los únicos restos posibles son 0,1 y 2
+
+****************************************
+Operadores de expresiones II
+****************************************
+ 
+operadores relacionales (Comparar produce un Booleano)
+
+Al comparar dos valores obtenemos siempre un resultado de tipo Logico(Verdadero o Falso)
+
+
+Operador	|	pregunta	|	Ejemplo		|	Resultado
+------------------------------------------------------------------
+==			Son Iguales?	|	Edad == 18	|	V o F
+--------------------------------------------------------------------
+!=		|	son distintos?	| 	edad != 18	|	V o F
+--------------------------------------------------------------------------------------
+>=		|	Mato o igual?	|	edad >= 18	|	---
+---------------------------------------------------------------------------------------
+<=		|	Menor o igual	|	edad <= 18			
+
+Importante!!
+'=' Asigna el valor a una variable
+'==' compara si dos son iguales
+
+
+Operadores Logicos
+
+Operador 	significado
+-------------------------------------------------------------------
+Y (&&)		verdadero si ambas expresiones son verdaderas
+---------------------------------------------------------------------
+O (||)		Verdadero si una de las dos expresiones es verdader
+---------------------------------------------------------------------
+Negación !	Invierte el valor
+
+& --> 	ampersand
+
+Tabla de verdad
+
+a		|	b	 |	a&&b	 |	a||b	 |	!a	    |
+------------------------------------------------------------------------------------|
+Falso		|	falso	 |	falso	 |	falso	 |	verdadero
+------------------------------------------------------------------------------------|
+falso		|	verdadero|	falso	 |	verdadero|	verdadero
+------------------------------------------------------------------------------------|
+verdadero	|	falso	 |	falso	 |	verdadero|	falso	
+------------------------------------------------------------------------------------|
+verdadero	|	verdadero|	verdadero|	verdadero|	falso
+------------------------------------------------------------------------------------|
+
+
+¿Qué devolvería este resultado?
+
+edad = 20 
+matriculado = Verdadero
+
+acceso = (edad >=18 ) Y Matriculado
+
+
+
+Ejercicio: Operadores Logicos
+
+Para entrar en una discoteca se necesita tener 18 años y tener una entrada comprada
+
+instrucciones 
+1.-Declara las variables edad y tiene entrada
+
+2.-Muestra al usuario 
+	"Introduce tu edad"
+	"¿Tienes la entrada comprada? Verdadero o Falso"
+
+3.- Muestra por pantalla con este formato:
+
+	"Acceso Permitido ¡Disfruta del evento!"
+	"Acceso Denegado. Debes de ser mayor de edad y tener la entrada comprada"
+
+
+Ejercicio
+
+un pasajero obtiene un descuento si es estudiante o si es jubilado (edad=>65)
+
+instrucciones
+
+1.-Declara las variables edad y esEstudiante
+
+2.-Muestra por pantalla al usuario los mensajes:
+	"Introduce tu edad"
+	"¿Eres estudiante?(Verdadero o Falso)"
+
+3.- Muestra Por pantalla con este formato la salida, según el caso
+
+	"¡Enorabuena! Tienes derecho al billete con descuento"
+	"Debes de pagar la tarifa ordinaria"
+
+
+SOLUCION:
+
+Algoritmo sin_titulo
+	Definir  edad Como Entero
+	Definir esEstudiante Como Logico
+	
+	Escribir "Introduce tu edad"
+	Leer edad
+	Escribir "¿Eres estudiante?(Verdadero o Falso)"
+	Leer esEstudiante
+	
+	Si edad >= 65 O esEstudiante Entonces
+		Escribir "¡Enorabuena! Tienes derecho al billete con descuento"
+	SiNo
+		Escribir "Debes de pagar la tarifa ordinaria"
+
+	FinSi
+FinAlgoritmo
+
+
+Ejercicio Mantenimiento de Aplicación
+
+El sistema solo permite realizar operaciones si NO esta en mantenimiento
+
+INSTRUCCIONES
+
+1.-Declara la variable enMantenimiento de tipo lógico
+
+2.-Muestra al usuario por pantalla el mensaje:
+
+	"¿El sistema esta en mantenimiento? (Verdadero o Falso)"
+
+3.-Muestra la salida con este formato
+	"El sistema activo. puedes realizar tus operaciones"
+	"Sistema Bloqueado. Estamos trabajando em el mantenimiento"
+
+
+
+SOLUCION
+
+Algoritmo sin_titulo
+	
+	Definir enMantenimiento Como Logico
+	
+	Escribir "¿El sistema esta en mantenimiento? (Verdadero o Falso)"
+	Leer enMantenimiento
+	
+	si  !esMantenimiento  Entonces
+		Escribir "El sistema activo. puedes realizar tus operaciones"
+		
+	SiNo
+		Escribir "Sistema Bloqueado. Estamos trabajando em el mantenimiento"
+		
+	FinSi
+
+	
+FinAlgoritmo
+
+
+Ejecicio: Aceptar términos y condiciones
+
+El sistema solo permite continuar el registro siu el usuario acepta las políticas y condiciones 
+
+instrucciones:
+
+1.-Declara las variables de tipo lógico aceptaTerminos 
+
+2.-Muestra por pantalla al usuario los mensajes:
+
+	-"¿Aceptas los temrinos y condiciones del servicio? (Verdadero o Falso)"
+
+3.-Evalua la condición utilizando la negación (!) comprobando si el usuario no ha aceptado las condiciones
+
+4.- Muestra por pantalla el mensaje:
+	"Acceso concedido. Puedes continuar el registro"
+	"Acceso denegado. Debes de aceptar los términos y condiciones para continuar"
+
+SOLUCION
+
+Algoritmo sin_titulo
+	
+	Definir aceptaTerminos Como Logico
+	
+	Escribir "¿Aceptas los temrinos y condiciones del servicio? (Verdadero o Falso)"
+	Leer aceptaTerminos
+	
+	si !aceptaTerminos Entonces
+		Escribir "Acceso denegado. Debes de aceptar los términos y condiciones para continuar"
+		
+	SiNo
+		Escribir "Acceso concedido. Puedes continuar el registro"
+	FinSi
+	
+FinAlgoritmo
+
+
+FUNCION REDON
+
+Pseint también dispone de la función REDON redondea un numero entero mas cercano 
+
+redon (expresion)
+
+numero		resultado		resultado redondeado
+
+4.2		4			4
+
+4.4		4			4
+
+4.6		4			5
+
+4.9		4			5
+
+
+IMPORTATE Usamos TRUNC y no REDON cuando trabajamos con unidades indivisibles, no podemos
+tener 8,3 personas en un equipo ni redondear a 9 si necesitamos saber con exactitud un valor, como
+en el casoi de ayer de reparto proporcional de personas por equipo, clase.. 
+
+ejemplo (RESOLVER EN CASA)
+un comercio aplica un descuento al total de la compra dado que las ,monedas mas pequeñas son de céntimos 
+(dos decimales), el sistema debe calcular el total con el descuento aplicado y redondear la cifra final al entero mas cercano para simplificar el cobro en efectivo
+
+instrucciones
+
+1.-Declara las variables del tipo real precioTotal, descuento, e importeConDescuento, y la variable
+importeFinal de tipo entero
+
+2.- Muestra por pantalla al usuario los mensajes:
+
+	"Introduce precio total de la compra"
+	"Introduce el porcentaje de descuento a aplicar"
+
+3.- Muestra por pantalla la salida:
+	"El importe exacto con descuento es : <importeDescuento>"
+	"El importe a cobrar redondeado es: <importeFinal>"
+
+Probar el resultado con las cantidades:
+precioTotal= 225.50
+
+resultado esperado: 
+importeDescuento = 180.4
+importeFinal = 180
+
+
+FUNCION ABS
+
+La función ABS devuelve un numero sin tener en cuenta su signo (- o +)
+
+ABS(NUMERO)
+
+Expresión		resultado
+
+Abs(-10)		10
+
+Abs(10)			10
+
+Abs(0)			0
+
+Ejercicio Diferencia de temperatura
+
+Dos amigos viven en ciudades diferentes y quieren saber cuantos grados de diferencia hay entre las temperaturas de sus ciudades
+
+como una temperatura puede ser mayor o menor que la otra, el programa deberá utilizar la función 
+Abs() para que la diferencia siempre sea positiva
+
+instrucciones
+
+1.- Declarar las variables de tipo real temperaturaCiudad1 temperaturaCiudad2  y diferenciaTemperatura
+
+2.- muestra al usuario los mensajes:
+
+	"introuce la temperatura de la ciudad 1"
+	"introuce la temperatura de la ciudad 2"
+
+3.-Muestra por pantalla el resultado con el formato
+	
+	"La diferencia entre las dos temperaturas es de <diferenciaTemperatura> grados"
+
+probar cpn los valores 
+
+primera ciudad 8
+
+segunda ciduad 2
+
+
+Solución:
+
+Algoritmo sin_titulo
+	
+	Definir temperaturaCiudad1, temperaturaCiudad2, diferenciaTemperatura Como Real
+	
+	Escribir "introuce la temperatura de la ciudad 1"
+	Leer temperaturaCiudad1
+	Escribir"introuce la temperatura de la ciudad 2"
+	Leer temperaturaCiudad2
+	
+	diferenciaTemperatura = temperaturaCiudad1 - temperaturaCiudad2
+	
+	Escribir "La diferencia entre las dos temperaturas es de ", abs(diferenciaTemperatura), " grados"
+	
+	
+	
+FinAlgoritmo
+
+
+
+FUNCION AZAR
+
+La función Azar(Numero) genra un entero desde 0 hasya numero -1
+
+Por Ejemplo azar(10) ---> Resultado 0,1,2,3,4,5,6,7,8,9
+
+algunas versiones de Pseint admiten un numero aleatorio dentro de un intervalo
+
+Por Ejemplo
+
+intervalo = Aleatorio(2,8) -----> Resultado 2,3,4,5,6,7,8
+
+Ejercico 
+
+queremos ñanzar uin dado virtual de 6 caras cada vez quye se ejecute el algoritmo, el programa deberá generar un numero comprendido entre 1 y 6
+
+Si el resultado es 6, el programa mostrara un mensaje especial indicando que ell jugador ha obtenido la puntuación máxima
+
+instrucciones
+
+1.-Declara la variable resultadoDado
+
+2.-Muestra por pantalla el resultado con este formato sies igual a 6
+
+	"Has lanzado el dado y has obtenido un <resultadoDado>"
+ 	
+	en caso contrario :
+
+		"Vuelve a intentarlo para conseguir un 6"
+
+
+
+
+ejercicio cajero automatico
+
+Vamos a simular el funcionamiento de un cajero automático. El programa solicita una cantidad 
+a retirar (que suponemos es siempre múltiplo de 10) y calcula cuantos billetes de 50€, y 20€ y 10€ 
+debe de entregar, usando siempre la menor cantidad de billetes posibles
+
+"Que sea múltiplo de 10 significa que termina en 0"
+
+instrucciones:
+
+1.-Declara las variables de tipo entero cantidad, billetes50, billetes20, billetes10, y resto
+
+2.-Muestra por pantalla al usuario los mensajes:
+
+	"Introduce la cantidad a retirar (Múltiplo de 10)"
+
+3.- Muestra por pantalla el desglose con este formato:
+
+	"Entregado ", <Billetes50>, " Billetes de 50"
+	"Entregado ", <Billetes20>, " Billetes de 20"
+	"Entregado ", <Billetes10>, " Billetes de 10"
+
+
+	
+Ejercicio - Contar aprobados y suspensos
+
+solicitamos la nota de 10 alumnos, tenemos que indicar 
+cuantos han aprobado y cuantos han suspendido
+
+instrucciones:
+1.-Declara las variables nota, aprbados y suspensos
+2.-pregunta al usuario por un numero:
+	"Introduce nota del alumno 1: "
+	"Introduce nota del alumno 2: "
+3.- Muestra por pantalla la salida 
+	"Numero de aprobados: <aprobados>"
+	"Numero de aprobados: <aprobados>"
+
+
+ejercicio control de temperaturas
+Solicitamos las temperaturas máximas e indicamos cuantos días la temperatura 
+ha sido igual o superior a 30 grados y cuantos días ha sido inferior
+
+instrucciones 
+1.-declara las variables diasCalurosos, díasSuaves, y temperatura
+2.-pregunta al usuario por la temperatura de cada uno de los 7 días 
+	"Introduce la temperatura del dia 1: "
+	"Introduce la temperatura del dia 2: "
+
+3.-Muestra el resultado 
+	"Dias con 30 grados o mas <diasCalurosos>"
+	"Dias con menos de 30: <diasSuaves>"
+
+
+
+---------------------------------------------------------------------------
+==========
+Ejercicio|| Contador de pasos diarios
+==========
+
+Una persona quiere alcanzar un objetivo de 10.000 pasos en el dia introduce el numero de pasos
+realizados en cada caminata hasta que la suma en total sea igual o superior a 10.000 al finalizar
+el programa indicara cuantas caminatas necesito y el total de pasos superados
+
+Intucciones:
+1.-Declara las variables
+pasosCaminata, pasosTotales y numeroCaminatas
+
+2.-Mientras pasos totales sea menor que 10000 solicitalos pasos de la caminarta actual 
+
+	Introduce los pasos de la caminata
+3.-Muestra por pantalla:
+	"Resultados"
+	"¡Objetivo conseguido!"
+	"Pasos totales: ", pasosTotales
+	"Caminatas necesarias: ", numeroCaminatas
+
+
+=====================================
+RESUMEN DE LO VISTO HASTA AHORA
+=====================================
+
+hasta ahora podemos seguir tres tipos de comportamiento:
+1.-Estructura secuencial
+-------------------------
+Las Instyrucciones se ejecutan una detrás de la otra
+
+Ejemplo:
+Leer numero1
+Leer numero2
+resultado = numero1 + numero2
+Escribir resultado
+
+2.-Esctructura condicional o de selección
+------------------------------------------
+El programa puede tomar deciciones utilizando SI
+
+3.- estructura de repetición
+--------------------------------------------
+El programa pyede repetir un numero de veces que conocemos de antemano
+utilizamos para
+
+el programa se reputa mientras secumple una condición --> MIENTRAS
+
+Ejercicio: El programa va a solicitar la nota de 10 exámenes. Mientras el usuario introduzca un numero invalido en cualquiera de los exámenes , el programa seguirá pidiendo la nota de ese examen y mostrando el mensaje de error
+para CADA examen valido mostrara si esta aprobado o suspenso.
+AL FINAL mostrara el numero total de aprobados, numero total
+de suspensos y la nota media de la clase
+
+INSTRUCCIONES:
+----------------
+1.-Declara las variables nota, aprobados, suspensos, sumaNotas, media e i 
+2.-Pregunta al usuario por la nota del examen:
+	"Introduce la nota del examen 1 "
+	"Introduce la nota del examen 2 "
+
+3.-Si la nota no es valida muetra un mensaje:
+	"Error Nota no valida. Intentalo de nuevo"
+4.-Muestra por pantalla:
+	"RESULTADO EXAMEN 1"
+	"Nota Registrada correctamente"
+	"Estado <aprobado o suspenso>"
+	"RESULTADOS EXAMEN 2"
+	"Nota resgistrada correctamente"
+	"Estado <comprobado/suspenso> "
+	-
+	---
+	"RESULTADOS FINALES"
+	"Numero de Aprobados: ", aprobados
+	"Numero de Supensos: ", suspensos
+	"Media: ", REDON(media)
+
+
+
+
+Ejercicio: Venta de entradas
+
+Un Cine registra la venta de 6 clientes. Cada Cliente debe indicar cuantas entradas quiere comprar. Solo se permite comprar entre 1 y 5 entradas por cliente, Si introduce una cantidad incorrecta se mostrara el mensaje de error y deberá volver a introducirla hasta que sea correcta.
+Además si compra 3 o mas entradas , se considera una compra grande.
+Debemos calcular el numero total de entradas vendidas y cuantas compras grandes se han realizado.
+
+
+
+
+
+Ejercicio Torneo de Videojuegos
+
+En un torneo participan 5 jugadores. Cada jugador disputa partidas hasta conseguir 3 victorias
+
+después de cada partida se introduce:
+1 si ha ganado
+0 si ha perdido
+
+El programa deberá indicar cuantas partidas ha necesitado cada jugador para conseguir sus 3 victorias.
+Al finalizar deberá indicar cuantos jugadores consiguieron las 3 victorias en 4 partidas o menos
+
+
+RECORDATORIO
+Antes de elegir una estructura debemos preguntarnos:
+¿Se exactamente el numero de veces que quiero repetir?
+	|
+	|--> Si, utilizamos PARA, por ejemplo 5 jugadores
+	|
+	|--> No utilizamos MIENTRAS, 
+
+escritura según 
+es una estructura de selección, hasta ahora hemos utilizado SI para conseguir que nuestro programa tome decisiones.
+
+Por ejemplo:
+
+Si edad >= 18 entonces
+	escribir "Eres mayor de edad"
+Sino 
+	Escribir "Eres menor de edad"
+
+en ete caso tenemos disponible dos caminos, pero imaginemos que queremos crear un programacon varios opciones:
+1.-Consultar Saldo
+2.-Consultar dinero
+3.-Retirar dinero
+4.-Salir
+
+podrianos utilizar varios Si
+
+por ejemplo:
+Si opción = 1 Entonces
+	Escribir"Consultar Saldo"
+Sino 
+Si opción = 2 entonces 
+	Escribir "Ingresar dinero"
+
+... etc etc
+
+
+Este algoritmo funcionaria, pero según aumenta el numero de opciones tenemos que introducir cada vez mas estructuras anidadas y el código comienza a ser difícil de leer No es una buena practica tener muchos si anidadas y el
+
+
+
+En según podemos añadir De otro modo, para controlar cualquier valor que no coincide con las opciones anteriores
+
+
+
+Cuando utilizamos Si y cuando SEGUN?
+UTILIZAMOS SI 
+Cuando queremos comprobar condiciones como:
+-Edad>=18
+-Temperaturar > 30
+-edad>=18 y tiene entrada = verdadero
+
+
+Es decir cuando trabajamos cpon condiciones, comparaciones rangos u operadores lógico.
+
+UTILIZAMOS SEGUN
+Cuando una misma variable puede tomar diferentes valores concretos:
+
+opción = 1
+opción = 2
+opción = 3
+opción = 4
+-
+
+Por ejemplo:
+-Opciones de menú
+-Numero de fila de la emana/mes..
+-Elección de un producto..
+
+Ejercicio 1: Dias de la semana
+
+Vamos a solicitar al usuario un numero comprendido de 1 al 7, en función del numero que introduzca mostraremos el dia de la semana correspondiente:
+
+Algoritmo Dias_de_la_semana
+	Escribir "Escribe un numero"
+	Leer numero
+	
+	Segun numero Hacer
+		1:
+			Escribir "Lunes"
+		2:
+			Escribir "Martes"
+		3:
+			Escribir "Miercoles"
+		4:
+			Escribir "Jueves"
+		5:
+			Escribir "viernes"
+		6:
+			Escribir "Sabado"
+		7:
+			Escribir "Domingo"
+	DeOtroModo
+		Escribir "Eso no es una Opción "
+	Fin Segun
+FinAlgoritmo
+
+
+ejercicio maquina de bebidas
+
+vamos a simular un menú de una maquina de bebidas
+
+el usuario podrá seleccionar 
+
+1. Agua - 1.00€
+2. Café -1.50
+3. Refresco - 2.000€ 
+4. Zumo 2.50€ 
+
+INSTRUCCIONES
+
+1.-Muestra el menú de productos.
+2.- Solicita a usuario una bebida
+	"Selecciona una bebida"
+3. Si la opción introducida no esta disponible, muestra: 
+	"Producto no disponible"
+
+
+-------------------------------------------------------------------------------------
+
+ 
+ejercicio calculadora 
+vamos a crear una calculadora que nos permita seleccionar la operación 
+que queremos realizar con dos números:
+
+1.Solicita los números al usuario
+	"Introduce el numero 1"
+	"Introduce el numero 2"
+
+2.Muestra el menú con las operaciones posibles de la calculadora
+	"1.-Sumar"
+	"2.-Restar"
+	"3.-Multiplicar"
+	"4.-Dividir"
+3.-Si la operación no existe muestra:
+	"Opción incorrecta"
+
+¡Cuidado con la division!
+
+
+mejora: Queremos utilizar la calculadora hasta que el usuario pulse,
+
+------------------------------------------------------------------------------------------
+la maquina atiende a 5 clientes, cada uno de los clientes podrá comprar un único producto
+
+después Introducirá el dinero en la maquina
+-si no introduce dinero suficiente , no podrá comprar y se devolverá el dinero
+introducido y se pasara con el siguiente cliente 
+
+-si introduce suficiente dinero recibirá la bebida y se mostrara el cambio
+
+el usuario podrá seleccionar 
+
+1. Agua - 1.00€
+2. Café -1.50
+3. Refresco - 2.000€ 
+4. Zumo 2.50€ 
+
+INSTRUCCIONES
+
+1.-Muestra el menú de productos.
+2.- Solicita a usuario una bebida
+	"Selecciona una bebida"
+3. Si la opción introducida no esta disponible, muestra: 
+	"Producto no disponible"
+
+
+Algoritmo sin_titulo
+	Definir cambio, precioAgua, precioCafe, precioRefresco, precioZumo como Real
+	
+	Para i = 0 Hasta 4 Hacer
+		
+		Escribir "Cliente ", i+1
+		Escribir "1 | Agua:1.00?"
+		Escribir "2| Café:1.50?"
+		Escribir "3| Refresco: 2.00?"
+		Escribir "4| Zumo: 2.50?"
+		Escribir "Selecciona un producto: "
+		Leer producto
+		
+		Mientras producto >4 o producto < 1 Hacer
+			
+			Escribir "Opcion incorrecta"
+			Escribir "Cliente ", i+1
+			Escribir "1 | Agua:1.00?"
+			Escribir "2| Café:1.50?"
+			Escribir "3| Refresco: 2.00?"
+			Escribir "4| Zumo: 2.50?"
+			Escribir "Selecciona un producto: "
+			Leer producto
+		Fin Mientras
+		
+		
+		Segun producto Hacer
+			1:
+				precio = 1
+			2:
+				precio = 1.50
+				
+			3:
+				precio = 2
+				
+			4:
+				precio = 2.50
+				
+		FinSegun
+		
+		Escribir "Ingresa tu Monto"
+		leer saldo
+		Si saldo >= precio Entonces
+			cambio= precio-saldo
+			Escribir "Tu cambio es: ", cambio
+		SiNo
+			Escribir "Te devuelvo el dinero ", saldo, " E"
+		Fin Si
+		
+	Fin Para
+FinAlgoritmo
+
+======================================================================================================
+------------------------------------------------------------------------------------------------------
+
+Ejercicio Alquiler de Bicicletas
+
+vamos a simular el alquiler para 6 clientes. cada cliente seleccionara un tipo de bicicleta e indicara cuantas horas quiere alquilarla
+
+la tienda ofrece estas opciones:
+
+1. Bicicletas de paseo|--> 4 euros por hora
+2. Bicicletas de montaña|--> 6 euros por hora
+3. Bicicletas de electrica|--> 10 euros por hora
+
+Si el alquiler dura 4 horas o mas, se aplicara un descuento de 20% sobre el importe total.
+
+cada cliente solo podrá alquilar una bicicleta.
+
+Instrucciones:
+
+1. Para cada cliente, muestra su numero y el menú:
+
+	"Cliente ", i+1
+	"Alquiler de bicicletas"
+	"1. Bicicleta de paseo|--> 4 euros por hora"
+	"2. Bicicleta de montaña|--> 6 euros por hora"
+	"3. Bicicleta eléctrica|--> 10 euros por hora"
+
+2.-Solicita:
+
+	"Selecciona un tipo de bicicleta"
+
+3.-si el cliente selecciona una opción no volver a elegir hasta que introduzca una opción correcta
+
+4.-Muestra:
+
+	"Solicita las horas del Alquiler"
+
+5.- el cliente debe introducir un numero de horas mayor que 0 en caso contrario sé mostrara el siguiente mensaje hasta que introduzca la cantidad correcta:
+
+	"El alquiler debe durar al menos una hora"
+	"Introduce el numero de horas de alquiler"
+	
+6.- Mensajes a Mostrar
+	"Se ha aplicado un descuento del 20%"
+	"Descuento <Descuento> euros"
+
+7.- Después de atender a todos los clientes mostraremos:
+	"Se ha atendido a 6 clientes"
+

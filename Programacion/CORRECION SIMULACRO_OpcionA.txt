@@ -1,0 +1,302 @@
+CORRECION SIMULACRO
+
+
+//IAN
+
+Algoritmo simulacro
+//Definimos variables
+Definir aprobados,suspensos Como Entero
+Definir media,sumanotas,nota Como Real
+
+//Ponemos en cero los acumuladores
+aprobados=0
+suspensos=0
+sumanotas=0
+//Abrimos bucle
+Para i = 1 Hasta 8 Hacer
+  //Pedimos una nota por iteración
+  Escribir"Introduce la nota del alumno " i ":"
+  Leer nota
+  //Sumamos las notas
+  sumanotas=sumanotas+nota
+
+  //Si la nota es menor que 5 añadimos 1 a los suspensos
+  Si nota<5 Entonces
+    suspensos=suspensos+1
+  //Si no sumamos 1 a aprobados
+  SiNo
+    aprobados=aprobados+1
+  FinSi
+FinPara
+
+//Calculamos la media de las notas
+media=sumanotas/8
+
+//Escribimos los resultados
+Escribir "Nota media: " media
+Escribir "Número de aprobados: " aprobados
+Escribir "Número de suspensos: " suspensos
+FinAlgoritmo
+
+//CORRECION  
+-------------
+esta muy bien comentado incluso el algoritmo funciona corregiría la identacion para que sea 
+mas fácil leer el código y que se vea mas limpio
+
+===================================================================================================================
+___________________________________________________________________________________________________________________
+//ELYES
+//ALICIA
+
+Algoritmo Ejercicio_Alicia_Tavares
+    // 1. Declara las variables
+    Definir aprobados, suspensos, i Como Entero
+    Definir media, sumaNotas, nota Como Real
+    
+    // Inicializar variables
+    aprobados <- 0
+    suspensos <- 0
+    sumaNotas <- 0
+    
+    // 2. Pregunta al usuario por la nota (8 notas)
+    Para i <- 1 Hasta 8 Con Paso 1 Hacer
+        Escribir "Introduce la nota del alumno ", i, ":"
+        Leer nota
+        
+        sumaNotas <- sumaNotas + nota
+        
+        // Determinar si está aprobado o suspenso (se aprueba con 5)
+
+        Si nota >= 5 Entonces
+            aprobados <- aprobados + 1
+        Sino
+            suspensos <- suspensos + 1
+        FinSi
+    FinPara
+    
+    // Calcular la nota media
+    media <- sumaNotas / 8
+    
+    // 3. Muestra el resultado
+    Escribir "Nota media: ", media
+    Escribir "Número de aprobados: ", aprobados
+    Escribir "Número de suspensos: ", suspensos
+FinAlgoritmo
+
+//CORRECION
+-------------
+
+Esta muy bien identado y es fácil de entender aparte comenta cada uno de los pasos y explica el código, solo redondearía la nota 
+
+===================================================================================================================
+___________________________________________________________________________________________________________________
+
+//ELYES
+//Jesús
+
+Algoritmo opcionA
+	
+	Definir aprobados, suspensos, nota, sumNotas Como Entero
+	Definir media Como Real
+	
+	aprobados = 0
+	suspensos = 0
+	sumNotas = 0
+	
+	Para i=1 Hasta 8 Hacer
+		Imprimir "Introduce la nota del alumno " i
+		Leer nota
+		sumNotas = sumNotas + nota
+		Si nota > 5 Entonces
+			aprobados = aprobados + 1
+		SiNo
+			suspensos = suspensos + 1
+		Fin Si
+		
+	Fin Para
+	
+	media = sumNotas/8
+	
+	Escribir ""
+	Escribir "Nota media: " media
+	Escribir "Numeros de aprobados: " aprobados
+	Escribir "Numeros de suspensos: " suspensos
+	
+	
+FinAlgoritmo
+
+//CORRECION
+-------------
+Se ve muy limpio la verdad, añadiría las variables media nota y sumar notas como reales y añadiría lo de redondear
+habría que poner >= que 5 en la ondicional ya que esta excluyendo el 5 como aprobado 
+
+===================================================================================================================
+___________________________________________________________________________________________________________________
+//ELYES---
+//OSCAR
+
+Algoritmo mi_algoritmo
+
+  Definir aprobados, suspensos Como Entero
+  Definir notas, media, sumaNotas Como Real
+
+  Para i = 1 Hasta 8 Hacer
+    Escribir "Introduce la nota del alumno ", i, " : "
+    Leer notas
+
+    Si notas >= 5 Entonces
+      aprobados = aprobados + 1
+    SiNo
+      suspensos = suspensos + 1
+    FinSi
+    
+    sumaNotas = sumaNotas + notas
+    
+  FinPara
+
+  media = sumaNotas / 8 
+
+  Escribir "Nota media: " media
+  Escribir "Numero de aprobados: " aprobados
+  Escribir "Numero de suspensos: " suspensos
+  
+FinAlgoritmo
+
+//CORRECION
+-------------
+esta limpio el código es muy fácil de leer, añadiría comentario y redondearía la media
+
+
+===================================================================================================================
+___________________________________________________________________________________________________________________
+//ELYES
+
+Algoritmo opcionA
+	definir aprobados , suspensos Como Entero
+	definir media,sumanotas Como Real
+	sumanotas=0
+	aprobados=0
+	suspensos=0
+	Para  i=1 Hasta 8 hacer 
+		Escribir "introduce la nota del alumno " i ":"
+		leer nota
+		sumanotas=sumanotas+nota
+		si nota>=5 Entonces
+			aprobados=aprobados+1
+		SiNo
+			suspensos=suspensos+1
+		FinSi
+		
+	FinPara
+	media=sumanotas/4
+	Escribir "nota media: " media
+	Escribir "Numero de aprobados: " aprobados
+	Escribir "Numero de suspensos: " suspensos
+
+//CORRECION
+-------------
+esta dividida la media entre 4 y no esta soltando bien el resultado por lo demás bien le añadiría comentarios 
+
+
+===================================================================================================================
+___________________________________________________________________________________________________________________
+
+//NABIL
+
+Algoritmo mi_algoritmo
+  Definir aprobados, suspensos, media, sumaNotas, nota Como Real
+  aprobados = 0
+  suspensos = 0
+  sumaNotas = 0
+
+
+  Para i = 1 Hasta 8 
+    Imprimir "Introduce la nota del alumno: "
+    Leer nota
+    
+    Si nota >= 5 Entonces
+      aprobados = aprobados + 1
+    SiNo
+      suspensos = suspensos + 1
+    FinSi
+    sumaNotas = (nota)
+    media = sumaNotas
+  FinPara
+  Escribir "Numero de aprobados: ", aprobados
+  Escribir "Numero de suspensos: ", suspensos
+  Escribir "Nota media: ", media
+FinAlgoritmo
+
+//CORRECION
+-------------
+añadiría la variable i cuando se imprime la consulta de las notas, le falta la operación para hacer la media al asignar sumarNotas = nota le esta dando el valor del ultimo alumno que solicita su nota y al final media termina cogiendo el valor de sumarNotas y añadiría comentarios
+
+
+===================================================================================================================
+___________________________________________________________________________________________________________________
+//NICOLAS
+Algoritmo mi_algoritmo
+  Definir aprobados, suspensos, media, sumaNotas, nota, i Como Real para mostrar el numero del alumno, 
+  aprobados=0
+  suspensos=0
+  sumaNotas=0
+  
+  Para i = 1 Hasta 8 Con Paso 1 Hacer
+    Imprimir "Introduce la nota del alumno ", i
+    Leer nota
+    sumaNotas= sumaNotas + nota
+    Si nota>=5 y nota<=10 Entonces
+      aprobados=aprobados +1
+    SiNo
+      Si nota<=4 y nota>=0 Entonces
+        suspensos=suspensos+1
+      SiNo
+        Imprimir "Valor no admitido"
+      FinSi
+    FinSi
+  FinPara
+  media = sumaNotas / 8
+  Imprimir "Numero de aprobados: ", aprobados
+  Imprimir "Numero de suspensos: ", suspensos
+  Imprimir "Nota media: ", media
+FinAlgoritmo
+
+//CORRECION
+-------------
+Simplificaria la condición, esta muy bien visto que si pasa de 10 y tal que el valor no sea admitido me ha gustado
+el agoritmo funciona y añadiría comentarios
+
+//ALEXIS
+
+Algoritmo sin_titulo
+	
+	Definir aprobados, suspensos Como Entero
+	Definir media, sumarNotas Como real
+	aprobados = 0
+	suspensos = 0
+	sumarNotas = 0
+	
+	Para i = 1 Hasta 8  Hacer
+		Escribir "introduce la nota del alumno " i
+		Leer sumarNotas
+		Si sumarNotas >= 5 Entonces
+			aprobados = aprobados + 1
+			
+		SiNo
+			suspensos = suspensos + 1
+			
+		FinSi
+	Fin Para
+	
+	Escribir "Numero de aprobados, " aprobados
+	Escribir "Numero de suspensos, " suspensos
+	sumarNotas = sumarNotas + sumarNotas
+	media = redon(sumarNotas/8)
+	Escribir "La media es ", media
+	
+FinAlgoritmo
+
+
+//CORRECION
+-------------
+me he dado cuenta que debería existir una variable mas aparte de las del enunciado ya que si añado sumarNotas le cambiara la variable cada vez que se complete el bucle y esta variable no sumaria ningún valor en ningún momento :( aparte falta meter comentarios explicando el código y añadir el redondeo en las media, aparte debería estar mejor identado 
