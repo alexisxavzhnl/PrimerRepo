@@ -1,0 +1,1504 @@
+VARIABLES, DATOS, OPERADORES
+------------------------------
+Variables --> almacenan información. Ejemplo precioBillete
+Buenas practicas: nombres descriptivos, camel case (primera letra minúscula,segunda mayuscula)
+
+Operadores --> permiten trabajar con esta información. Ejemplo *,+,-,/
+
+Expresiones --> combinan variables, literales y operadores
+
+*Literales --> valor fijo, escrito directamente en el código, a diferencia de una variable
+que puede cambiar de valor.
+
+Ejemplo de una expresion:
+total = precioBillete * cantidadBillete
+
+TIPOS DE VARIABLES
+------------------
+
+Tipo 	| Informacion
+----------------------
+Entero  | 18
+----------------------
+Real    | 3.5
+----------------------
+Cadena  | "Lucia"
+----------------------
+Logico  | Verdadero / Falso
+----------------------
+
+
+DEFINICION DE VARIABLES
+------------------------
+Definir edad Como Entero
+Definir precio Como Real
+Definir nombre Como Cadena
+Definir tieneCarnet Como Logico
+
+
+
+DEFINIR, LEER, ESCRIBIR Y ASIGNAR
+----------------------------------
+DEFINIR edad Como Entero
+  |---> reserva un espacio en memoria y le damos un nombre (edad) y un tipo de dato (Entero)
+  |---> indica al programa que tipo de información podrá almacenar en esta variable
+
+LEER edad
+  |---> le estamos pidiendo al usuario que introduzca un valor por teclado
+  |---> la ejecución del programa se detiene y vemos en pantalla el símbolo ">"
+
+edad = 10
+  |---> estamos guardando (asignando) 10 en la variable edad
+
+ESCRIBIR edad
+  |---> muestra la información por pantalla para que el usuario la pueda ver
+
+Por ejemplo:
+Vamos a escribir este código en Pseint
+
+Definir edad Como Entero
+edad = 18
+
+Leer edad
+Escribir edad
+
+¿Qué valor va a mostrar la consola? 5
+
+//EJERCICIO 1. CONCATENAR CADENAS
+
+Algoritmo concatenarCadenas
+// Pido un nombre por teclado y muestro el siguiente mensaje
+// ¡Bienvenido <nombre>!
+// Tipo de dato, en este caso Cadena y vamos a concatenar con ","
+
+  //Declaracion de variables
+  Definir nombre Como Cadena
+
+  //Mostrar por pantalla al usuario el mensaje "Introduce tu nombre: "
+  Escribir "Introduce tu nombre: "
+
+  //El programa se detiene y espera el dato por teclado y lo guarda en la variable 
+  //nombre
+  Leer nombre
+
+  //Mostramos por pantalla al usuario el mensaje "¡Bienvenido <nombre>!"
+  Escribir "¡Bienvenido ", nombre, "!"
+
+FinAlgoritmo
+
+
+EJERCICIO 2. TIPO DE DATO LOGICO
+---------------------------------
+Algoritmo estadoInterruptor
+// Guardamos el estado de una luz (encendida o apagada)
+// Como es un tipo de dato logico solo puede valer Verdadero o Falso
+  
+  //Definir variable
+  Definir luzEncendida Como Logico
+
+  //Asignamos a un valor literal Logico
+  luzEncendida = Verdadero
+
+  //Salida por pantalla
+  Escribir "¿La luz esta encendida?: ", luzEncendida
+
+FinAlgoritmo
+
+
+-------------------------------
+EL PROGRAMA EMPIEZA A TOMAR DECISIONES "SI"
+--------------------------------------------
+
+Ejercicio 3. Netflix permite crear una cuenta dependiendo de la edad.
+¿Puede el usuario crear la cuenta?
+
+MODELO EPS
+
+ENTRADA		| PROCESO		  | SALIDA
+--------------------------------------------------
+edad		| comprobar que edad >=18 | Devolver mensaje
+
+
+Algoritmo netflix
+  
+  //Declaracion variable
+  Definir edad Como Entero
+  
+  //Muestra el mensaje por pantalla al usuario "Introduce tu edad: "
+  Escribir "Introduce tu edad: "
+
+  //El programa se detiene a esperar el dato por teclado y lo guarda en edad
+  Leer edad
+
+  //Creamos una bifurcacion en el programa, tenemos dos caminos posibles
+  Si edad >=18 Entonces
+    //Camino1
+    Escribir "Eres mayor de edad, puedes crear tu cuenta"
+  SiNo
+    //Camino 2
+    Escribir "Eres menor de edad, lo siento, no puedes crear tu cuenta"
+  FinSi
+
+FinAlgoritmo
+
+
+------------------------
+OPERADORES DE COMPARACION
+--------------------------
+
+Operador 	| 	Significado
+-------------------------------------
+>		|	Mayor que
+-------------------------------------
+<		|	Menor que
+-------------------------------------
+>=		|	Mayor o igual
+-------------------------------------
+<=		|       Menor o igual
+-------------------------------------
+!=              |	Distinto
+-------------------------------------
+
+
+¿Qué crees que devuelve cada expresión?
+
+Algoritmo operadores
+  
+  //Declaracion variable
+  Definir edad Como Entero
+  edad = 20
+
+  //Muestra por pantalla el valor ... VERDADERO
+  Escribir edad > 18
+
+  //Muestra por pantalla el valor ... FALSO
+  Escribir edad = 18
+
+  //Muestra por pantalla el valor ... VERDADERO
+  Escribir edad < 30
+  
+FinAlgoritmo
+
+
+--------------
+EJERCICIO 4. ¿Qué número es mayor?
+
+Introduce dos numeros por consola e indica cuál de los dos es mayor
+
+///Solucion
+Algoritmo numeroMayorMenor
+  //Declaramos las variables
+  Definir numero1, numero2 Como Entero
+
+  //Asignando 0 a las variables
+  numero1 = 0
+  numero2 = 0
+  
+  //Mostramos por consola el mensaje "Escriba el primer numero:"
+  Escribir "Escriba el primer numero: "
+  
+  //Pedimos al usuario que introduzca el dato por consola
+  //La ejecucion del programa se detiene '>'
+  Leer numero1
+
+  //Mostramos por consola el mensaje "Escriba el segundo numero:"
+  Escribir "Escriba el segundo numero: "
+
+  //Pedimos al usuario que introduzca el dato por consola
+  //La ejecucion del programa se detiene '>'
+  Leer numero2
+
+  //Creamos el primer camino
+  Si numero1 > numero2 Entonces
+    //Mostramos por consola el mensaje "El numero <numero1> es mayor que <numero2>
+    Escribir "El numero ", numero1, " es mayor que ", numero2
+
+    //Creamos el segundo camino
+    SiNo Si numero2 > numero1 Entonces
+     //Mostramos por consola el mensaje "El numero <numero2> es mayor que <numero1>
+      Escribir "El numero ", numero2, " es mayor que ", numero1
+      
+      SiNo 
+      //Mostramos por consola el mensaje "Los dos numeros son iguales"
+      Escribir "Los dos numeros son iguales"
+    FinSi
+  FinSi
+
+FinAlgoritmo
+
+-----------------------
+
+Ejercicio 5. Crear un programa que introduzca dos valores enteros y calcule:
+-Suma
+-Resta
+-División
+-Multiplicación
+
+Instrucciones:
+1. Declara dos variable llamadas 'operando1', 'operando2'
+2. Pide al usuario por teclado que introduzca el valor para cada uno de los datos
+3. Realiza las 4 operaciones básicas guardando cada resultado en su variable correspondiente:
+(suma, resta, multiplicacion, division)
+
+4. Muestra todos los resultados por pantalla con el formato:
+"Suma: <resultado>"
+"Resta: <resultado>"
+"Multiplicacion: <resultado>"
+"Division: <resultado>"
+
+///Solución
+
+Algoritmo calculo
+
+  //Definimos las variables que vamos a utilizar para el cálculo
+  Definir operando1, operando2 como Entero
+
+  //Asignamos valor 0 a las variables introducidas
+  operando1 = 0
+  operando2 = 0
+
+  //Empezamos con los enunciados para escribir los valores en la consola
+  Escribir "Introduce un número a calcular: "
+  Leer operando1
+  Escribir "Introduce otro número a calcular: "
+  Leer operando2
+
+  //Generamos los cálculos menos la division, ya que surgirá un problema que es la división entre 0
+  resultadoSuma = operando1 + operando2
+  resultadoResta = operando1 - operando2
+  resultadoMultiplicacion = operando1 * operando2
+
+  //Escribimos los resultados de las 3 operaciones
+  Escribir "Resultados de los valores introducidos: "
+  Escribir "Suma: " resultadoSumaSuma
+  Escribir "Resta: " resultadoResta
+  Escribir "Multiplicación: " resultadoMultiplicacion
+  
+  //Definimos la división que si el segundo valor = 0, escriba que no se puede calcular
+  Si operando2 = 0 Entonces
+    Escribir "No se puede hacer la división ya que el segundo valor es 0"
+
+  //Aqui el cálculo de la división si es != 0
+  SiNo
+    resultadoDivision = operando1 / operando2
+    Escribir "División: " resultadoDivision
+  FinSi
+  
+FinAlgoritmo
+
+------------------------------
+
+Ejercicio 6.Crear un programa que determine el signo de un numero
+introducido por el usuario.
+
+Instrucciones:
+1. Declarar una variable llamada numero
+2. Muestra por pantalla al usuario el mensaje: 
+	"Introduce numero entero:"
+3. Muestra por pantalla con este formato (Salida según caso):
+	-Si es mayor que 0: "El numero es positivo"
+	-Si es menor que 0: "El numero es negativo"
+        -Si no cumple ninguna de las anteriores: "El numero es cero" 
+
+
+
+
+///Solución:
+Algoritmo calculoNumeroPositivo
+
+ Definir numero Como Entero
+  Escribir "Introducir un número entero"
+  Leer numero 
+
+  Si numero>=0 Entonces
+    Si numero=0 Entonces
+      Escribir "El numero es cero"
+    SiNo
+      Escribir "El numero es positivo"
+    FinSi
+  SiNo
+    Escribir "El numero es negativo"
+  FinSi
+FinAlgoritmo
+
+--------------------------------------
+Ejercicio 7. Calculadora descuentos
+
+Tenemos que aplicar un 10% de descuento a las compras superiores o
+iguales a 100€.
+
+Instrucciones:
+1. Definir las variables: totalCompra, descuento, totalFinal
+2. Mostrar por pantalla al usuario el mensaje:
+   "Introduce el importe de la compra (€): "
+3. Muestra por pantalla la salida:
+   "El descuento aplicado es: ", seguido del valor del descuento
+   "Total a pagar: ", seguido del valor de totalFinal
+
+
+
+
+//Solución:
+------------
+Algoritmo calculoDescuento
+//Definimos la variable totalcompra con real
+ Definir totalCompra Como Real
+
+//Asignamos un valor a la variable descuento
+descuento=0.90
+
+//Pedimos por consola que se introduzca un monto
+Escribir "Introduzca precio de la compra (€)"
+Leer totalCompra
+
+//Comprobamos valor de la compra sea mayor o igual a 100
+Si totalCompra>=100 Entonces
+//Si es el caso mostramos por consola el descuento y monto final
+  Escribir "Su descuento es del 10%"
+  totalFinal=totalCompra * descuento
+  Escribir "Total a pagar: " totalFinal
+  //Si no, mostramos por consola que el descuento no es aplicable y el monto final
+SiNo
+  Escribir "Su compra no aplica a descuento"
+  Escribir "Total a pagar" totalCompra
+FinSi
+FinAlgoritmo
+
+-----------------
+
+Ejercicio 8. Calcula el numero mayor de tres
+
+Tenemos que encontrar el numero mas grande entre tres valores enteros
+introducidos.
+
+Instrucciones:
+1. Declara las variables de tipo entero numero1, numero2, numero3
+
+2. Muestra por pantalla al usuario los mensajes:
+	"Introduce el primer numero: "
+	"Introduce el segundo numero: "
+	"Introduce el tercer numero: "
+
+3. Muestra por pantalla 
+	"El numero mayor es: ", seguido del valor correspondiente
+
+
+////Solución
+
+Algoritmo mayorDeTres
+Escribir "Ponga usted el primer numero"
+Leer numero1
+Escribir "Ponga usted el segundo numero"
+Leer numero2
+Escribir "Ponga usted el tercer numero"
+Leer numero3
+
+  Si numero1> numero2 Entonces
+    Si numero1 > numero3 Entonces
+      Escribir numero1 " Es mayor que los demas"
+    FinSi
+  FinSi 
+
+ Si numero2> numero1 Entonces
+    Si numero2 > numero3 Entonces
+      Escribir numero2 " Es mayor que los demas"
+    FinSi
+  FinSi 
+
+  Si numero3> numero2 Entonces
+    Si numero3 > numero1 Entonces
+      Escribir numero3 " Es mayor que los demas"
+    FinSi
+  FinSi 
+
+FinAlgoritmo
+
+
+
+----------------------------------
+Lunes 21/09
+------------
+
+Ejercicio 8. Juego piedra, papel o tijera
+
+Objetivo: Solicitar al usuario dos números enteros por consola que representen
+las jugadas e indicar si gana el jugador1, el jugador2 o si hay un empate.
+
+Instrucciones:
+1. Declara las variables de tipo entero jugador1 y jugador2
+
+2. Muestra por pantalla al usuario los mensajes:
+	"Jugador 1, introduce tu jugada (1=Piedra, 2=Papel, 3=Tijera): "
+	"Jugador 2, introduce tu jugada (1=Piedra, 2=Papel, 3=Tijera): "
+	
+
+3. Muestra por pantalla 
+	Si hay empate : "Empate"
+	Si gana jugador 1: "Gana el jugador 1"
+	Si gana jugador 2: "Gana el jugador 2"
+
+
+
+VAMOS A PENSAR EL CODIGO ANTES DE PROGRAMARLO
+-------------------
+1º Vamos a escribid todas las situaciones posibles que se pueden dar en la partida para entender el problema 
+por completo.
+
+
+JUGADOR 1	|	JUGADOR 2	|	RESULTADO	|
+-----------------------------------------------------------------
+Piedra(1)	|	Piedra(1)	|	Empate
+------------------------------------------------------------------
+Piedra(1)	|       Papel (2)	|	Gana Jugador 2
+------------------------------------------------------------------
+Piedra(1)	|	Tijera (3)	|	Gana Jugador 1
+------------------------------------------------------------------
+Papel (2)	|	Piedra (1)	|	Gana Jugador 1
+------------------------------------------------------------------
+Papel (2)	|	Papel (2)	|	Empate
+------------------------------------------------------------------
+Papel (2)	|	Tijera(3)	|	Gana Jugador 2
+------------------------------------------------------------------
+Tijera (3)	|	Piedra(1)	|	Gana el Jugador 2
+-------------------------------------------------------------------
+Tijera(3)	|	Papel (2)	|	Gana el Jugador 1
+--------------------------------------------------------------------
+Tijera(3)	|	Tijera(3)	|	Empate
+--------------------------------------------------------------------
+
+Resolvemos el empate:
+
+´´´´´´´´´´
+Si jugador1=jugador2 Entonces
+	//Estamos en el caso de empate resolvemos 3 de las 9 combinaciones posibles
+
+Sino
+	//Resolvemos las 6 combinaciones restantes
+
+´´´´´´´´´´
+
+Fijamos una de nuestras variables, en este caso Jugador1. ¿Qué opciones tenemos?
+1. Si jugador1 ha sacado Piedra(1)
+	- Ya sabemos que no han empatado
+	-Opciones Jugador2 ha podido sacar Papel(2) o Tijera(3)
+	- SI Jugador2 ha sacado Papel(2), gana Jugador2, SINO gana Jugador1
+
+Repetimos la lógica anterior...
+2. Si jugador1 ha sacado Papel(2)
+	- Ya sabemos que no han empatado
+	-Opciones Jugador2 ha podido sacar Piedra(1) o Tijera(3)
+	- SI Jugador2 ha sacado Piedra(1), gana Jugador1, SINO gana Jugador2
+
+3. Si jugador1 ha sacado Tijera(3)
+	- Ya sabemos que no han empatado
+	-Opciones Jugador2 ha podido sacar Piedra(1) o Papel(2)
+	- SI Jugador2 ha sacado Piedra(1), gana Jugador2, SINO gana Jugador1
+
+--------------------------------
+SOLUCION:
+
+Algoritmo piedraPapelTijera
+	//Definimos las variables
+	Definir jugador1, jugador2 Como Entero
+	
+	//Mostramos por pantalla el mensaje:
+	Escribir "Jugador 1, introduce tu jugada (1=piedra, 2=papel, 3= tijera)"
+	//Pedimos por consola el dato, el programa se detiene '>'
+	Leer jugador1
+
+	//Mostramos por pantalla el mensaje:
+	Escribir "Jugador 2, introduce tu jugada (1=piedra, 2=papel, 3= tijera)"
+	//Pedimos por consola el dato, el programa se detiene '>'
+	Leer jugador2
+	
+	//PASO1: Filtramos los EMPATES
+	Si jugador1=jugador2 Entonces
+		//Ha habido un empate
+		Escribir "Gana el Jugador 1"
+	SiNo
+		//PASO2: Analizamos las 6 combinaciones restantes
+		//fijamos como variable el jugador1
+		
+		//Evaluamos si el jugador1 saco Piedra(1)
+		Si jugador1=1 Entonces
+			Si jugador2 = 2 Entonces
+				Escribir "Gana el jugador 2"
+			SiNo
+				Escribir "Gana el jugador 1"
+			FinSi
+		SiNo
+			//Evuamos si el jugador1 saco Papel(2)
+			Si jugador1= 2 Entonces
+				Si jugador2=1 Entonces
+					Escribir "Gana el juador1"
+				SiNo
+					Escribir "Gana el jugador2"
+				FinSi
+			SiNo
+				//Evaluamos si el jugador1 saco Tijera(3)
+				Si jugador1=3 Entonces
+					Si jugador2=2 Entonces
+						Escribir "Gana el jugador1"
+					SiNo
+						Escribir "Gana el jugador2"
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+FinAlgoritmo
+
+
+-----------------------------------------------------
+EJERCICIO: Tarifa de un aparcamiento
+
+Objetivo: Solicitar al usuario el tiempo de estacionamiento en horas y 
+si es cliente abonado o no, para calcular la tarifa final a pagar aplicando 
+los tramos correspondientes y el descuento si procede.
+
+Si esAbonado, aplicamos un 20% de descuento
+Tarifas
+-------- 
+1hora = 2€
+Mas de 1hora menos de 3 = 5€
+Mas de 3 horas = 10€
+
+Instrucciones:
+
+1. Declara las variables necesarias de tipo entero horas, de tipo lógico 
+esAbonado y de tipo real tarifa y precioFinal
+
+2.Muestra por pantalla al usuario los siguientes mensajes:
+  "Introduce el numero de horas de estacionamiento: "
+  "¿Es cliente abonado?(VERDADERO/FALSO)"
+
+3.Muestra por pantalla con este formato (Salidas según el caso):
+   "El importe total a pagar es: <precioFinal> €"
+
+
+Tabla de tramos
+
+Tiempo (horas)	|	Tramo aplicado	|	Tarifa	|	esAbonado	| 	Precio Final
+------------------------------------------------------------------------------------------------------
+Hasta 1 hora	|	Tramo1		|	2€	|      FALSO		|	2€
+-------------------------------------------------------------------------------------------------------
+Hasta 1 hora	|	Tramo1		|	2€	|      VERDADERO	|	(2€ -20%)
+--------------------------------------------------------------------------------------------------------
+Mas de 1 hasta 3|	Tramo2		|	5€	|      FALSO		|	5€
+--------------------------------------------------------------------------------------------------------
+Mas de 1 hasta 3|	Tramo2		|	5€	|      VERDADERO	|	(5€ -20%)
+--------------------------------------------------------------------------------------------------------
+Mas 3		|	Tramo3		|	10€	|      FALSO		|	10€
+--------------------------------------------------------------------------------------------------------
+Mas 3		|	Tramo3		|	10€	|      VERDADERO	|	(10€ -20%)
+
+
+Nivel 1 condiciones de la variable hora:
+	- Si horas <= 1
+		Tarifa corresponde al tramo 1
+        - Sino
+	     Si horas <=3
+		Tarifa corresponde al tramo2
+	     SiNo 
+		Tarifa corresponde al tramo3
+
+
+
+Nivel 2 Condiciones abonado
+	-Si esAbonado = "VERDADERO"
+		Aplicamos descuento 20%. precioFinal = tarifa*0.80
+
+	-Sino
+		Mantenemos precio sin cambios
+
+
+
+
+-----
+SOLUCION:
+
+Algoritmo tarifaAparcamiento
+	//Definimos las variables
+	Definir horas,tarifa Como Entero
+	Definir esAbonado Como Logico
+	Definir precioFinal Como Real
+	
+	//Mostramos por pantalla el mensaje:
+	Escribir "Introduce el numero de horas de estacionamiento: "
+	//Pedimos por consola el dato, el programa se detiene '>'
+	Leer horas
+	
+	Si horas <=1 Entonces
+		//Tramo1 = 2€
+		tarifa = 2
+	SiNo
+		//Tramo2 = 5€
+		Si horas <= 3 Entonces
+			tarifa = 5
+		SiNo
+			//Tramo3 = 10€
+			tarifa =10
+		FinSi
+	FinSi
+	
+	si esAbonado = Verdadero Entonces
+		//Se aplica el descuento del 20%
+		precioFinal = tarifa * 0.80
+	SiNo
+		//No se aplica el descuento
+		precioFinal = tarifa
+	FinSi
+	
+	//Muestra el resultado
+	Escribir "El importe total a pagar es: ", precioFinal
+	
+FinAlgoritmo
+
+
+----------------------------------
+
+NUEVO OPERADOR %
+-----------------
+El operador se conoce también como MOD o modulo, se utiliza
+para calcular el RESTO de una DIVISION
+
+Casos comunes de uso
+1. Saber si un numero es PAR o IMPAR
+	Es PAR si al /2 el resto es 0
+        Es IMPAR si al /2 el resto es 1
+
+2. Saber si un numero es multiplo de otro, cuando
+la división es exacta (Resto = 0) significa que es multiplo
+
+3. Comprobar si queremos hacer un reparto de 25 alumnos en grupos de 4 personas
+	25 / 4 = 6 grupos completos
+	25 % 4 = 1 alumno sin grupo
+
+
+------
+Algoritmo numeroParImpar
+	//Declaramos la variable que almace el numero
+	Definir numero Como Entero
+	
+	//Solicitamos numero
+	Escribir "Escribe un numero"
+	
+	//Guardamos numero introducido por el usuario
+	Leer numero
+	
+	Si numero%2 = 0 Entonces
+		Escribir "El numero es par"
+	SiNo
+		Escribir "El numero es impar"
+	FinSi
+	
+FinAlgoritmo
+---
+
+FUNCION TRUNC
+--------------
+La función TRUNC elimina la parte decimal de un numero y conserva únicamente su
+parte entera.
+
+Trunc(expresion)
+
+
+Por ejmeplo:
+
+Expresión	|	Resultado
+----------------------------------
+Trunc(4.8)	|	4
+-----------------------------------
+Trunc(7.2)	|	7
+------------------------------------
+Trunc(4.0)	|	4
+------------------------------------
+
+Importante. TRUNC no REDONDEA
+
+
+EJERCICIO. ¿Cuántos miembros tiene cada equipo?
+
+Objetivo: Un grupo de 20 amigos va a realizar un scape room que tiene 3 salas.
+Los participantes deben dividirse en 3 equipos los mas equilibrados posibles.
+El programa deberá calcular cuantas personas habrá en cada equipo.
+
+
+Instrucciones:
+1. Declara las variables numeroAmigos, personasPorEquipo, personasSobrantes, equipo1,
+equipo2, equipo3
+
+2. Muestra al usuario por pantalla los mensajes:
+	"Numero total de participantes: <numeroAmigos>"
+	"Personas que quedan por repartir: <personasSobrantes>"
+
+3. Muestra por pantalla con este formato:
+	"El equipo 1 estará formado por <equipo1> personas"
+	"El equipo 2 estará formado por <equipo2> personas"
+	"El equipo 3 estará formado por <equipo3> personas"
+
+
+Ayuda!!! Si dividimos un numero entre 3, los únicos restos posibles son 0,1 y 2
+
+
+---------
+- Asociar personas con equipo
+- Dificultad asignar valores en el esquema
+- 
+
+-------------
+
+Algoritmo numeroParImpar
+	//Declaramos la variables 
+	Definir numeroAmigos, personasPorEquipo, personasSobrantes Como Entero
+	Definir equipo1, equipo2, equipo3 Como Entero
+	
+	// El grupo esta formado por 20 amigos
+	Escribir "Numero total de participantes"
+	Leer numeroAmigos
+	
+	//Calculamos el numero de personas por Equipo
+	personasPorEquipo = Trunc(numeroAmigos / 3)
+	
+	//Los restos posibles de una division /3 son: 0,1,2
+	personasSobrantes = numeroAmigos % 3
+	
+	//Inicialmente
+	equipo1 = personasPorEquipo
+	equipo2 = personasPorEquipo
+	equipo3 = personasPorEquipo
+	
+	//Si queda 1 lo añadimos al equipo1
+	Si personasSobrantes = 1 Entonces
+		equipo1 = equipo1 + 1
+	FinSi
+	
+	//Si queda 2 lo añadimos al equipo1 y al equipo2
+	Si personasSobrantes = 2 Entonces
+		equipo1 = equipo1 + 1
+		equipo2 = equipo2 + 1
+	FinSi
+	
+	//Mostramos el resultado 
+	Escribir "Numero total de participantes: ", numeroAmigos
+	Escribir "Numero personas que quedan por repartir: ", personasSobrantes
+	
+	Escribir "El equipo 1 estará formado por ", equipo1, "personas"
+	Escribir "El equipo 1 estará formado por ", equipo2, "personas"
+	Escribir "El equipo 1 estará formado por ", equipo3, "personas"
+	
+FinAlgoritmo
+
+-------
+OPERADORES Y EXPRESIONES II
+----------------------------
+Operadores relacionales (Comparar produce un booleano)
+-----------------------------------------------------
+
+Al comparar dos valores obtenemos siempre un resultado de tipo Logico (Verdadero o Falso)
+
+
+Operador	|Pregunta	|	Ejemplo		|	Resultado
+------------------------------------------------------------------------------
+==		|¿Son iguales?	|  	edad == 18	|	Verdadero / Falso
+-------------------------------------------------------------------
+!=		|¿Son distintos?|	edad != 18	|	Verdadero / Falso
+----------------------------------------------------------------------------------
+>=		| ¿Mayor o igual?|       edad >= 18	|         Verdadero / Falso
+--------------------------------------------------------------------------------
+<=		| ¿Menos o igual?|     edad <= 18	|	Verdadero / Falso
+
+
+Importante
+'=' asigna el valor a una variables
+'==' compara si dos son iguales 
+
+
+OPERADORES LOGICOS
+-------------------
+Operador	| Significado
+-----------------------------
+Y (&&)		| Verdadero SI AMBAS expresiones son verdaderas
+----------------------------------------------------------------
+O (||)		| Verdadero si UNA expresión es verdadera
+----------------------------------------------------------------
+Negación !	| Invierte el valor
+---------------------------------------------------------------------
+
+& --> ampersand
+
+TABLA DE VERDAD
+----------------
+
+A	 |	B	|	A&&B	|	A ||B	|	!A
+--------------------------------------------------------------------
+Falso	 |	Falso	|	Falso	|	Falso	|	Verdadero
+--------------------------------------------------------------------------
+Falso	 |    Verdadero  |      Falso	|     Verdadero |      Verdadero
+---------------------------------------------------------------------------
+Verdadero|    Falso	 |    Falso	|  Verdadero    |    Falso
+---------------------------------------------------------------------------
+Verdadero |   Verdadero  |  Verdadero   | Verdadero	| Falso
+----------------------------------------------------------------------------
+
+¿Qué devolvería este resultado?
+
+edad = 20
+matriculado = Verdadero
+
+acceso = (edad >=18) Y matriculado
+
+
+
+Ejercicio. Operadores lógicos
+
+Para entrar en una discoteca se necesita tener 18 años y tener la entrada comprada.
+
+Instrucciones:
+1. Declara las variables edad y tieneEntrada
+
+2. Muestra al usuario los mensajes:
+	"Introduce tu edad: "
+	"¿Tienes la entrada comprada? (Verdadero/Falso):"
+
+3. Muestra por pantalla con este formato:
+	"Acceso permitido. ¡Disfruta del evento!"
+	"Acceso denegado. Debes de ser mayor de edad y tener la entrada comprada"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

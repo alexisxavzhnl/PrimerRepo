@@ -1,0 +1,19 @@
+Algoritmo sin_titulo
+	Definir  valoracion, comida, ambiente, antencion Como Logico
+	
+	contadorComida = 0
+	contadorAmbiente = 0
+	contadorAmbiente = 0
+	Para i = 0 Hasta 2
+		Escribir "elije que es lo que quieres puntuar"
+		leer valoracion
+		Segun valoracion
+			1: 
+				Escribir "valoracion Comida"
+			2:
+				Escribir "valoracion Ambiente"
+			3:
+				Escribir "valoracion Atencion"
+		FinSegun
+	FinPara
+FinAlgoritmo

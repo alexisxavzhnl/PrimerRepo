@@ -1,0 +1,66 @@
+• Tenemos que crear una ruleta, en esta debe aparecer:
+Los 3 colores (verde, rojo, negro)
+El dinero que queramos apostar
+• Define estas variables:
+"color, verde, rojo, negro, bolita, dinero, apuesta" como Enteros, para hacer el cálculo.
+• Esta ruleta debe ser completamente al azar, pero siguiendo unas reglas:
+• 
+• 
+• 
+• - El número 0 es verde SIEMPRE- Los números pares son ROJOS- Los números impares son NEGROS
+* La ruleta dispone de 37 números (si contamos el 0)
+• Como mensajes, debemos tener:
+"Color elegido (0, verde)(1, rojo)(2, negro)"
+"Dinero apostado"
+El numero que aparece al escribir las variables de arriba ^^
+"Color que ha tocado"
+"Has ganado"
+"Has perdido“
+• Para el sistema de apuesta, cuando cae en ROJO o NEGRO, se hace un multiplicador 
+de x2 a la apuesta
+• Si cae en VERDE, el multiplicador es de x15
+
+
+
+
+Algoritmo ruleta
+	
+	Definir color, verde, rojo, negro, bolita, dinero, apuesta Como Entero
+	
+	verde = 0
+	rojo = 1
+	negro = 2
+	
+	Escribir "Elige un color (Verde = 0)(Rojo = 1)(Negro = 2)"
+	Leer color
+	
+	Escribir "Cuanto dinero quieres apostar?"
+	Leer dinero
+	
+	bolita = azar(37)
+	Escribir "El número que ha salido es: ", bolita
+	
+	//-IMPORTANTE- , bolita = azar, ENTONCES, si bolita = 0, bolita = verde
+	// Igual con el resto, si bolita%2 = 0, bolita = rojo (El resto es 0, es par)
+	// Y si bolita%2 = 1, bolita = negro (Ya que su resto es 1, es impar)
+	
+	Si bolita = 0 Entonces //------------------------  Camino de color verde
+		
+		bolita = verde
+		Escribir  "Ha salido el color: Verde"
+		apuesta = dinero * 15
+	//------------------------------------------------	Camino de color rojo
+		SiNo Si bolita%2 == 0 Entonces
+			
+		bolita = rojo
+		Escribir "Ha salido el color: Rojo"		
+		apuesta = dinero * 2
+	//------------------------------------------------	Camino de color negro
+		SiNo
+			
+			bolita = negro
+			Escribir "Ha salido el color: Negro"
+			apuesta = dinero * 2
+			
+		FinSi
+	FinSi
